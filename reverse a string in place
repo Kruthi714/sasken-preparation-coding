@@ -15,6 +15,7 @@ class Main {
             i++;
             j--;
         }
-        System.out.println(sb);
+        String reverse=sb.toString();
+        System.out.println(reverse);
     }
 }
