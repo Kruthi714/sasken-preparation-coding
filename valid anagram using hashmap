@@ -1,0 +1,44 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Map<Character,Integer>mp=new HashMap<>();
+        Map<Character,Integer>mp1=new HashMap<>();
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String t=sc.nextLine();
+         if(s.length()!=t.length())
+         {
+             System.out.println("not anagram");
+             System.exit(0);
+         }
+        for(int i=0;i<s.length();i++)
+        {
+            if(!mp.containsKey(s.charAt(i)))
+            {
+                mp.put(s.charAt(i),1);
+            }
+            else{
+                mp.put(s.charAt(i),mp.get(s.charAt(i))+1);
+            }
+        }
+         for(int i=0;i<t.length();i++)
+        {
+            if(!mp1.containsKey(t.charAt(i)))
+            {
+                mp1.put(t.charAt(i),1);
+            }
+            else{
+                mp1.put(t.charAt(i),mp1.get(t.charAt(i))+1);
+            }
+        }
+       
+        if (mp.equals(mp1)) {
+            System.out.println("Anagrams");
+        } else {
+            System.out.println("Not Anagrams");
+        }
+        
+        
+    }
+}
