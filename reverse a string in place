@@ -1,0 +1,20 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    
+        String s="kruthi";
+        int i=0,j=s.length()-1;
+        StringBuilder sb=new StringBuilder(s);
+        while(i<j)
+        {
+            char ch=sb.charAt(i);
+            char c=sb.charAt(j);
+            sb.setCharAt(i,c);
+            sb.setCharAt(j,ch);
+            i++;
+            j--;
+        }
+        System.out.println(sb);
+    }
+}
